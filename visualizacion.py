@@ -7,7 +7,7 @@ from streamlit_folium import st_folium
 
 
 
-covid = pd.read_json('dat\Covid.json', orient ='column')
+covid = pd.read_json('Covid.json', orient ='column')
 print(covid)
 print(covid.columns)
 print(covid.info())
@@ -71,8 +71,8 @@ st.write("          ")
 st.header("Situación global. Casos, muertes y recuperados por país.")
 st.write("Número de casos registrados de COVID-19, por países. El color indica el número de casos, muertes y recuperados registrados en cada país.")
 
-world_covid_data = pd.read_json("dat\Covid.json")
-country_geo = os.path.join('dat\world-countries.json')
+world_covid_data = pd.read_json("Covid.json")
+country_geo = pd.read_json('world-countries.json')
 
 seleccion3 = st.selectbox('Selecciona :', ['recovered', 'total deaths', 'total cases'])
 
